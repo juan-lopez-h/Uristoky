@@ -14,7 +14,7 @@ Requisitos funcionales:
 Requisitos no funcionales:
 -
 - Disponibilidad del 90% mensual 
-- Reportes e importaciones masivas: < 30 s para hasta mas o menos 10.000 productos
+- Reportes e importaciones masivas: <35 s para hasta mas o menos 10.000 productos
 - Los movimientos de stock deben ser transaccionales
 - Stock calculado a partir de movimientos (kardex), con historial inmutable
 - Validaciones para impedir stock negativo, salvo que el cliente lo configure
