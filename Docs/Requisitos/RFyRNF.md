@@ -3,6 +3,8 @@
 Requisitos funcionales: 
 -
 -  Ingreso productos 
+- login usuarios
+- roles de: admin, usuario, solo lectura  
 - control multialmacen
 - ubicaciones dinamicas
 - alertas proactivas por falta de stock 
