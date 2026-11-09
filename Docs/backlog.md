@@ -1,4 +1,4 @@
-# Epicas e Historias de usurio
+# Epicas e Historias de usuario
 
 ## *Epica E-1 autenticacion y administracion de usuarios* 
 
@@ -14,11 +14,11 @@ Criterios de aceptacion:
 - El sistema debe validar las credenciales
 - Si las credenciales son incorrectas, debe informar que no fue posible iniciar sesión
 - Si las credenciales son correctas, debe permitir el acceso según los permisos del usuario
-- Las contraseñas no deben almacenarse en texto plano.Las contraseñas no deben almacenarse en texto plano.
+- Las contraseñas no deben almacenarse en texto plano.
 - El usuario pueda alternar mostrar u ocultar su contraseña mientras la escribe,
 
 ### Historia de usuario HU-2
-- Requisito relacionado: RF-02. [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-02. [Requisitos](./Requisitos/RFyRNF.md)
 
 Como usuario, quiero cerrar mi sesión para evitar que otras personas accedan a mi cuenta.
 
@@ -27,7 +27,7 @@ Criterios de aceptación:
 - Al cerrar sesión, las credenciales o el mecanismo de autenticación de la sesión deben dejar de ser válidos.
 - El usuario debe ser redirigido a la pantalla de inicio de sesión
 ### Historia de usuario HU-3
-- Requisito relacionado: RF-03. [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-03. [Requisitos](./Requisitos/RFyRNF.md)
 
 Como administrador, quiero registrar, consultar, modificar y desactivar usuarios de mi organización para controlar quién tiene acceso a la plataforma.
 
@@ -38,7 +38,7 @@ Criterios de aceptación:
 - Puede desactivar usuarios sin eliminar sus registros históricos.
 - No puede administrar usuarios pertenecientes a otra organización.
 ### Historia de usuario HU-4
-- Requisito relacionado: RF-04.  [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-04.  [Requisitos](./Requisitos/RFyRNF.md)
 
 Como administrador, quiero asignar roles a los usuarios para determinar qué operaciones pueden realizar dentro del sistema.
 
@@ -53,7 +53,7 @@ Criterios de aceptación:
 Gestión de productos
 Objetivo: permitir el registro y administración de los productos que conforman el inventario de una organización.
 ### HU-05. Registro de productos
-- Requisito relacionado: RF-05.  [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-05.  [Requisitos](./Requisitos/RFyRNF.md)
 
 Como usuario autorizado, quiero registrar productos con sus características principales para mantener organizado el inventario.
 
@@ -64,7 +64,7 @@ Criterios de aceptación:
 - El producto debe quedar asociado a la organización correspondiente.
 - El sistema debe informar si el registro fue exitoso o si ocurrió algún error.
 ### HU-06. Consulta de productos
-- Requisito relacionado: RF-06.  [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-06.  [Requisitos](./Requisitos/RFyRNF.md)
 
 Como usuario, quiero consultar la información de los productos registrados para conocer sus características y estado.
 
@@ -74,7 +74,7 @@ Criterios de aceptación:
 - Debe mostrar su estado y las existencias disponibles cuando corresponda.
 - No debe mostrar información de otras organizaciones.
 ### HU-07. Modificación de productos
-- Requisito relacionado: RF-07.  [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-07.  [Requisitos](./Requisitos/RFyRNF.md)
 
 Como usuario autorizado, quiero modificar la información de un producto para mantener actualizados sus datos.
 
@@ -85,7 +85,7 @@ Criterios de aceptación:
 - El sistema debe informar el resultado de la operación.
 ### HU-08. Desactivación de productos
 
-- Requisito relacionado: RF-08.  [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-08.  [Requisitos](./Requisitos/RFyRNF.md)
 
 Como administrador, quiero desactivar productos que ya no se utilizan para evitar que aparezcan como productos activos sin perder su historial.
 
@@ -93,9 +93,9 @@ Criterios de aceptación:
 - El sistema debe permitir cambiar el estado de un producto a inactivo.
 - Los productos inactivos no deben aparecer en los registros operativos habituales.
 - Su información y movimientos históricos deben conservarse.
-- El sistema debe impedir desactivar productos cuando existan condiciones que comprometan la integridad de operaciones pendientes (actualizaciones, ventas en proceso, etc).
+- El sistema debe impedir desactivar productos cuando existan condiciones que comprometan la integridad de operaciones pendientes (actualizaciones, tranferencias pendientes, proceso, etc).
 ### HU-09. Administración de categorías
-- Requisito relacionado: RF-09.  [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-09.  [Requisitos](./Requisitos/RFyRNF.md)
 
 Como administrador, quiero organizar los productos en categorías para facilitar su clasificación y consulta.
 
@@ -111,7 +111,7 @@ Objetivo: permitir la administración de múltiples almacenes y la distribución
 
 ### HU-10. Administración de almacenes
 
-- Requisito relacionado: RF-10.  [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-10.  [Requisitos](./Requisitos/RFyRNF.md)
 Como administrador, quiero registrar y administrar diferentes almacenes para representar los espacios físicos donde se encuentra la mercancía de mi organización.
 
 Criterios de aceptación:
@@ -122,7 +122,7 @@ Criterios de aceptación:
 - El sistema debe conservar la información de los movimientos asociados al almacén.
 ### HU-11. Administración de ubicaciones
 
-- Requisito relacionado: RF-11.   [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-11.   [Requisitos](./Requisitos/RFyRNF.md)
 Como administrador, quiero crear ubicaciones dentro de cada almacén para identificar dónde se encuentran físicamente los productos.
 
 Criterios de aceptación:
@@ -132,7 +132,7 @@ Criterios de aceptación:
 - Debe permitir identificar las existencias asociadas a cada ubicación.
 ### HU-12. Consulta de existencias por almacén
 
-- Requisito relacionado: RF-12.   [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-12.   [Requisitos](./Requisitos/RFyRNF.md)
 Como usuario, quiero consultar las cantidades disponibles de cada producto en los diferentes almacenes para conocer su distribución.
 
 Criterios de aceptación:
@@ -146,7 +146,7 @@ Objetivo: registrar y controlar las operaciones que modifican las existencias de
 
 ### HU-13. Registro de entradas
 
-- Requisito relacionado: RF-13.   [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-13.   [Requisitos](./Requisitos/RFyRNF.md)
 Como usuario autorizado, quiero registrar entradas de mercancía para incrementar las existencias disponibles de los productos.
 
 Criterios de aceptación:
@@ -159,7 +159,7 @@ Criterios de aceptación:
 
 ### HU-14. Registro de salidas
 
-- Requisito relacionado: RF-14.    [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-14.    [Requisitos](./Requisitos/RFyRNF.md)
 Como usuario autorizado, quiero registrar salidas de mercancía para disminuir las existencias disponibles de los productos.
 
 Criterios de aceptación:
@@ -171,7 +171,7 @@ Criterios de aceptación:
 - La operación debe ser transaccional.
 ### HU-15. Ajustes de inventario
 
-- Requisito relacionado: RF-15.    [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-15.    [Requisitos](./Requisitos/RFyRNF.md)
 Como administrador, quiero realizar ajustes de inventario para corregir diferencias entre las existencias registradas y las cantidades físicas.
 
 Criterios de aceptación:
@@ -182,7 +182,7 @@ Criterios de aceptación:
 - El sistema debe actualizar las existencias de manera transaccional.
 ### HU-16. Transferencias entre almacenes
 
-- Requisito relacionado: RF-16.    [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-16.    [Requisitos](./Requisitos/RFyRNF.md)
 Como usuario autorizado, quiero transferir productos entre almacenes o ubicaciones para mantener actualizado el inventario de cada espacio.
 
 Criterios de aceptación:
@@ -194,7 +194,7 @@ Criterios de aceptación:
 - La operación debe ser transaccional.
 ### HU-17. Consulta del historial de movimientos
 
-- Requisito relacionado: RF-17.    [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-17.    [Requisitos](./Requisitos/RFyRNF.md)
 Como usuario, quiero consultar el historial de movimientos de inventario para conocer cómo han cambiado las existencias de los productos.
 
 Criterios de aceptación:
@@ -208,7 +208,7 @@ Criterios de aceptación:
 Objetivo: permitir la gestión de productos que se almacenan o manejan mediante diferentes unidades de medida y presentaciones.
 
 ### HU-18. Administración de unidades de medida
-- Requisito relacionado: RF-18.   [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-18.   [Requisitos](./Requisitos/RFyRNF.md)
 Como administrador, quiero disponer de unidades de medida para registrar correctamente las cantidades de los productos.
 
 Criterios de aceptación:
@@ -217,7 +217,7 @@ Criterios de aceptación:
 - Debe validar que las cantidades ingresadas sean compatibles con la unidad definida.
 ### HU-19. Conversión de unidades
 
-- Requisito relacionado: RF-19.    [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-19.    [Requisitos](./Requisitos/RFyRNF.md)
 Como usuario autorizado, quiero registrar movimientos utilizando diferentes presentaciones o unidades equivalentes para facilitar el control de productos a granel.
 
 Criterios de aceptación:
@@ -229,17 +229,17 @@ Criterios de aceptación:
 ## Epica E-06. Alertas de inventario
 Objetivo: identificar oportunamente los productos que necesitan reposición.
 ### HU-20. Configuración de existencias mínimas
-- Requisito relacionado: RF-20.  [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-20.  [Requisitos](./Requisitos/RFyRNF.md)
 Como administrador, quiero configurar niveles mínimos de inventario para identificar los productos que requieren reposición.
 
 Criterios de aceptación:
 - El sistema debe permitir establecer una cantidad mínima para cada producto.
 - Debe permitir modificar el valor configurado.
 - El nivel mínimo debe poder consultarse desde la información del producto.
-- mínimo aplica globalmente al producto.
+- El nivel mínimo aplica globalmente al producto, sin distinción por almacén.
 ### HU-21. Alertas por bajo inventario
 
-- Requisito relacionado: RF-21.   [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-21.   [Requisitos](./Requisitos/RFyRNF.md)
 Como usuario, quiero recibir alertas cuando las existencias de un producto sean iguales o inferiores a su nivel mínimo para identificar posibles necesidades de reposición.
 
 Criterios de aceptación:
@@ -252,7 +252,7 @@ Criterios de aceptación:
 Objetivo: permitir conocer el valor económico de las existencias registradas.
 ### HU-22. Cálculo del valor del inventario
 
-- Requisito relacionado: RF-22.  [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-22.  [Requisitos](./Requisitos/RFyRNF.md)
 Como administrador, quiero conocer el valor económico de las existencias para tener una referencia del capital representado en el inventario.
 
 Criterios de aceptación:
@@ -262,7 +262,7 @@ Criterios de aceptación:
 - Debe conservar la trazabilidad necesaria para explicar los valores calculados.
 ### HU-23. Consulta del valor del inventario
 
-- Requisito relacionado: RF-23.   [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-23.   [Requisitos](./Requisitos/RFyRNF.md)
 Como administrador, quiero consultar la valoración económica del inventario para conocer su distribución y valor total.
 
 Criterios de aceptación:
@@ -275,7 +275,7 @@ Criterios de aceptación:
 Objetivo: facilitar el acceso a la información de los productos y del inventario.
 ### HU-24. Búsqueda de productos
 
-- Requisito relacionado: RF-24.   [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-24.   [Requisitos](./Requisitos/RFyRNF.md)
 Como usuario, quiero buscar productos por nombre, código o descripción para encontrarlos rápidamente.
 
 Criterios de aceptación:
@@ -285,7 +285,7 @@ Criterios de aceptación:
 - Los resultados deben estar limitados a la organización del usuario.
 ### HU-25. Filtrado de información
 
-- Requisito relacionado: RF-25.   [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-25.   [Requisitos](./Requisitos/RFyRNF.md)
 Como usuario, quiero filtrar los productos por categoría, almacén, ubicación y estado para consultar información específica.
 
 Criterios de aceptación:
@@ -294,7 +294,7 @@ Criterios de aceptación:
 - Debe permitir retirar los filtros aplicados.
 ### HU-26. Paginación de registros
 
-- Requisito relacionado: RF-26.   [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-26.   [Requisitos](./Requisitos/RFyRNF.md)
 Como usuario, quiero navegar por los resultados mediante páginas para consultar grandes cantidades de información de manera organizada.
 
 Criterios de aceptación:
@@ -307,7 +307,7 @@ Criterios de aceptación:
 Objetivo: facilitar la incorporación y extracción de grandes cantidades de información.
 ### HU-27. Importación masiva de productos
 
-- Requisito relacionado: RF-27.   [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-27.   [Requisitos](./Requisitos/RFyRNF.md)
 Como administrador, quiero importar productos mediante archivos Excel o CSV para registrar grandes cantidades de productos sin tener que ingresarlos individualmente.
 
 Criterios de aceptación:
@@ -318,7 +318,7 @@ Criterios de aceptación:
 - Debe evitar que un archivo incorrecto genere información inconsistente.
 ### HU-28. Exportación de información
 
-- Requisito relacionado: RF-28.   [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-28.   [Requisitos](./Requisitos/RFyRNF.md)
 Como administrador, quiero exportar la información del inventario para conservar una copia de los datos y utilizarlos en otras herramientas.
 
 Criterios de aceptación:
@@ -327,7 +327,7 @@ Criterios de aceptación:
 - Debe respetar los filtros aplicados cuando se solicite exportar una consulta específica.
 - Los archivos deben conservar una estructura comprensible y organizada.
 ### HU-29. Validación de archivos
-- Requisito relacionado: RF-29.   [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-29.   [Requisitos](./Requisitos/RFyRNF.md)
 Como administrador, quiero conocer los errores de un archivo antes de completar su importación para evitar incorporar información incorrecta.
 
 Criterios de aceptación:
@@ -340,7 +340,7 @@ Criterios de aceptación:
 ## Epica E-10. Panel de control
 Objetivo: presentar información resumida sobre el estado del inventario.
 ### HU-30. Consulta del panel de inventario
-- Requisito relacionado: RF-30.   [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-30.   [Requisitos](./Requisitos/RFyRNF.md)
 Como administrador, quiero consultar un panel de control con indicadores del inventario para conocer rápidamente el estado de los productos de mi organización.
 
 Criterios de aceptación:
@@ -354,14 +354,14 @@ Criterios de aceptación:
 ## Epica E-11. Gestión y aislamiento de organizaciones
 Objetivo: garantizar que cada empresa gestione su información de forma independiente dentro de la plataforma.
 ### HU-31. Administración de información por organización
-- Requisito relacionado: RF-31.   [Requisitos](./Requisitos/RFyRNF.mds)
+- Requisito relacionado: RF-31.   [Requisitos](./Requisitos/RFyRNF.md)
 Como organización, quiero administrar mis productos, almacenes, usuarios y movimientos de inventario de manera independiente para mantener organizada mi información empresarial.
 
 Criterios de aceptación:
 - Los registros deben estar asociados a una organización.
-- Los usuarios deben solo pueden hacer modificaciones a su organizacion. 
+- Los usuarios solo pueden hacer modificaciones dentro de su organizacion. 
 - La información debe conservar la relación con su organización durante las operaciones.
-### HU-32. Aislamiento de información  [Requisitos](./Requisitos/RFyRNF.mds)
+### HU-32. Aislamiento de información  [Requisitos](./Requisitos/RFyRNF.md)
 
 - Requisito relacionado: RF-32.
 Como organización, quiero que mi información esté protegida frente al acceso de otras organizaciones para garantizar la privacidad de mis datos.
@@ -409,7 +409,7 @@ El sistema deberá impedir que las existencias de un producto sean negativas
 
 Criterio de aceptación:
 - Por defecto, el sistema no permitirá registrar salidas superiores a las existencias disponibles.
-- El administrador podrá habilitar o deshabilitar el manejo de stock negativo, si esta configuración se implementa.
+- El administrador podrá habilitar o deshabilitar el manejo de stock negativo.
 - La validación deberá realizarse en el backend.
 - Las operaciones concurrentes no deberán permitir superar las existencias disponibles por una condición de carrera.
 RNF-06. Protección de datos personales
