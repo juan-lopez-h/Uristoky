@@ -372,6 +372,9 @@ Criterios de aceptación:
 - Las consultas, modificaciones y operaciones deben respetar el aislamiento.
 - El aislamiento debe aplicarse también a las importaciones, exportaciones y consultas de reportes.
 
+## Epica E-12, Administración de la plataforma:
+
+
 4. Requisitos no funcionales
 Los siguientes requisitos establecen condiciones de calidad, seguridad, rendimiento y confiabilidad que deberá cumplir Uristoky.
 RNF-01. Disponibilidad del sistema
