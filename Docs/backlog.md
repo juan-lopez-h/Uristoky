@@ -15,7 +15,9 @@ Criterios de aceptacion:
 - Si las credenciales son incorrectas, debe informar que no fue posible iniciar sesión
 - Si las credenciales son correctas, debe permitir el acceso según los permisos del usuario
 - Las contraseñas no deben almacenarse en texto plano.
-- El usuario pueda alternar mostrar u ocultar su contraseña mientras la escribe,
+- El usuario pueda alternar mostrar u ocultar su contraseña mientras la escribe
+- el usuario de una organización suspendida entra en modo solo lectura (RN-44).
+
 
 ### Historia de usuario HU-2
 - Requisito relacionado: RF-02. [Requisitos](./Requisitos/RFyRNF.md)
@@ -32,19 +34,22 @@ Criterios de aceptación:
 Como administrador, quiero registrar, consultar, modificar y desactivar usuarios de mi organización para controlar quién tiene acceso a la plataforma.
 
 Criterios de aceptación:
-- El administrador puede registrar nuevos usuarios.
+- El administrador de organizacion puede registrar nuevos usuarios.
 - Puede consultar el listado de usuarios de su organización.
 - Puede modificar la información permitida de un usuario.
 - Puede desactivar usuarios sin eliminar sus registros históricos.
 - No puede administrar usuarios pertenecientes a otra organización.
+- respeta el límite de usuarios (RN-48)
+- no puede desactivarse a sí mismo y no puede dejar la organización sin administrador (RN-08).
 ### Historia de usuario HU-4
 - Requisito relacionado: RF-04.  [Requisitos](./Requisitos/RFyRNF.md)
 
 Como administrador, quiero asignar roles a los usuarios para determinar qué operaciones pueden realizar dentro del sistema.
 
 Criterios de aceptación:
-- El sistema debe contemplar los roles administrador, usuario y solo lectura.
-- El administrador puede asignar y modificar roles.
+- El sistema debe contemplar los roles administrador global, administrador de organización, usuario y solo lectura.
+- El administrador global puede asignar y modificar roles.
+- El administrador de organizacion, puede crear usuarios, pero con un limite definido por el administrador global (segun el plan pagado)
 - El usuario solo puede ejecutar las operaciones autorizadas para su rol.
 - El usuario de solo lectura no puede crear, modificar ni eliminar información.
 - Los permisos deben validarse tanto en la interfaz como en el backend.
@@ -169,6 +174,7 @@ Criterios de aceptación:
 - Debe generar un registro histórico del movimiento.
 - No debe permitir cantidades negativas ni superiores a las existencias disponibles
 - La operación debe ser transaccional.
+
 ### HU-15. Ajustes de inventario
 
 - Requisito relacionado: RF-15.    [Requisitos](./Requisitos/RFyRNF.md)
@@ -373,7 +379,7 @@ Criterios de aceptación:
 - El aislamiento debe aplicarse también a las importaciones, exportaciones y consultas de reportes.
 
 ## Epica E-12, Administración de la plataforma:
-
+crear organización, suspender o reactivar, definir límite de usuarios, precio y plan, crear y desactivar usuarios en cualquier organización, y ver la auditoría.
 
 4. Requisitos no funcionales
 Los siguientes requisitos establecen condiciones de calidad, seguridad, rendimiento y confiabilidad que deberá cumplir Uristoky.
@@ -412,7 +418,7 @@ El sistema deberá impedir que las existencias de un producto sean negativas
 
 Criterio de aceptación:
 - Por defecto, el sistema no permitirá registrar salidas superiores a las existencias disponibles.
-- El administrador podrá habilitar o deshabilitar el manejo de stock negativo.
+- no hay stock negativo 
 - La validación deberá realizarse en el backend.
 - Las operaciones concurrentes no deberán permitir superar las existencias disponibles por una condición de carrera.
 RNF-06. Protección de datos personales
