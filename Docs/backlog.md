@@ -378,8 +378,96 @@ Criterios de aceptación:
 - Las consultas, modificaciones y operaciones deben respetar el aislamiento.
 - El aislamiento debe aplicarse también a las importaciones, exportaciones y consultas de reportes.
 
-## Epica E-12, Administración de la plataforma:
-crear organización, suspender o reactivar, definir límite de usuarios, precio y plan, crear y desactivar usuarios en cualquier organización, y ver la auditoría.
+## Epica E-12. Administración de la plataforma
+Objetivo: permitir al administrador global gestionar las organizaciones clientes, sus usuarios, límites y estado de servicio.
+
+### HU-33. Gestión de organizaciones
+- Requisito relacionado: RF-33.  [Requisitos](./Requisitos/RFyRNF.md)
+- Reglas relacionadas: RN-40, RN-43.
+
+Como administrador global, quiero crear, consultar y modificar organizaciones para atender a mis clientes en la plataforma.
+
+Criterios de aceptación:
+- Puede crear una organización con nombre, límite de usuarios, precio mensual y fecha de fin de prueba.
+- Al crearla, debe registrarse su primer administrador de organización.
+- Puede consultar el listado de organizaciones con su estado.
+- Puede modificar los datos de una organización.
+- Solo el administrador global puede realizar estas operaciones.
+
+### HU-34. Suspensión y reactivación de organizaciones
+- Requisito relacionado: RF-34.  [Requisitos](./Requisitos/RFyRNF.md)
+- Reglas relacionadas: RN-44, RN-45.
+
+Como administrador global, quiero suspender o reactivar una organización para controlar el acceso de quienes no están al día con el pago.
+
+Criterios de aceptación:
+- El cambio de estado se realiza manualmente.
+- Una organización suspendida deja a todos sus usuarios en solo lectura, con consulta y exportación, sin cambiar sus roles.
+- Al reactivarla, los usuarios recuperan los permisos de su rol.
+- Una organización cerrada no permite acceso.
+- Debe mostrar alertas de pruebas vencidas y organizaciones suspendidas.
+- Cada cambio queda registrado en la auditoría.
+
+### HU-35. Límite de usuarios, plan y precio
+- Requisito relacionado: RF-35.  [Requisitos](./Requisitos/RFyRNF.md)
+- Reglas relacionadas: RN-43, RN-46, RN-48.
+
+Como administrador global, quiero definir el límite de usuarios y el precio de cada organización para ajustar el servicio a lo contratado.
+
+Criterios de aceptación:
+- Puede definir y modificar el límite de usuarios activos.
+- No puede fijar un límite menor a los usuarios activos actuales.
+- Puede modificar el precio, que aplica desde el siguiente periodo y no retroactivamente.
+- Se conserva el historial de cambios de precio y límite.
+- Los administradores de organización no pueden modificar estos valores.
+
+### HU-36. Administración de usuarios de cualquier organización
+- Requisito relacionado: RF-36.  [Requisitos](./Requisitos/RFyRNF.md)
+- Reglas relacionadas: RN-47, RN-48, RN-49, RN-50, RN-51.
+
+Como administrador global, quiero crear, desactivar y reactivar usuarios de cualquier organización para controlar el acceso a la plataforma.
+
+Criterios de aceptación:
+- Puede crear usuarios en cualquier organización y asignarles un rol.
+- El correo debe ser único en toda la plataforma.
+- No puede crear usuarios si la organización alcanzó su límite.
+- Puede desactivar y reactivar a cualquier usuario.
+- Puede cambiar el rol de cualquier usuario.
+
+### HU-37. Consulta de auditoría
+- Requisito relacionado: RF-37.  [Requisitos](./Requisitos/RFyRNF.md)
+- Reglas relacionadas: RN-37, RN-42.
+
+Como administrador global, quiero consultar el registro de acciones administrativas para tener trazabilidad de lo que ocurre en la plataforma.
+
+Criterios de aceptación:
+- Muestra usuario, fecha, organización y acción.
+- Permite filtrar por organización, usuario, tipo de acción y fechas.
+- Los registros no pueden modificarse ni eliminarse.
+
+### HU-38. Activación de cuenta y aceptación de la política de datos
+- Requisito relacionado: RF-38.  [Requisitos](./Requisitos/RFyRNF.md)
+- Reglas relacionadas: RN-10, RN-38, RN-52.
+
+Como usuario nuevo, quiero activar mi cuenta y aceptar la política de tratamiento de datos para poder ingresar a la plataforma.
+
+Criterios de aceptación:
+- Recibe un enlace de activación o contraseña temporal de primer uso.
+- Debe definir su propia contraseña.
+- Debe aceptar la política de datos para continuar, y queda registrada fecha y versión aceptada.
+- El enlace de activación vence.
+
+### HU-39. Restablecimiento de contraseña
+- Requisito relacionado: RF-39.  [Requisitos](./Requisitos/RFyRNF.md)
+- Reglas relacionadas: RN-10.
+
+Como usuario, quiero restablecer mi contraseña si la olvido para recuperar el acceso a mi cuenta.
+
+Criterios de aceptación:
+- Puede solicitar el restablecimiento con su correo.
+- La respuesta es la misma exista o no el correo.
+- El enlace es de un solo uso y vence.
+- Al cambiar la contraseña, las sesiones anteriores se invalidan.
 
 4. Requisitos no funcionales
 Los siguientes requisitos establecen condiciones de calidad, seguridad, rendimiento y confiabilidad que deberá cumplir Uristoky.
@@ -439,3 +527,6 @@ Criterio de aceptación:
 - La exportación deberá estar disponible en formatos como Excel y CSV.
 - La información exportada deberá conservar una estructura comprensible.
 - Las condiciones de acceso, conservación y eliminación de los datos deberán estar definidas contractualmente.
+
+RNF-08, Seguridad
+Las contraseñas con hash, 2FA para el administrador global antes de producción (RN-42), expiración de sesiones y límite de intentos de login.
