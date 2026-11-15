@@ -4,4 +4,4 @@ Uristoky surge como una solución de software empresarial bajo un modelo de susc
 El sistema permitirá a las empresas gestionar diferentes áreas de su operación, como inventarios, ventas, proveedores, clientes y estadísticas, esto dependiendo de su suscripcion
 
 # Documentacion
-La documentacion se encuentra en la carpeta Docs, donde se encuentran el backlog [backlog.md](./Docs/disenio/backlog.md)
+La documentacion se encuentra en la carpeta Docs, donde se encuentran el backlog [backlog.md](./Docs/backlog.md)
