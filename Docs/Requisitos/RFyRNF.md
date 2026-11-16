@@ -26,8 +26,18 @@ El sistema deberá permitir asignar roles a los usuarios para controlar las func
 Los roles iniciales contemplados son:
 
 - **Administrador:** tendrá acceso a las funcionalidades administrativas y de gestión del inventario.
+- **administrador global:** tiene acceso a cambiar el precio de las suscripciones, modficiar la cantidad de usuarios por organizacion y otras funciones de administrador de la aplicacion, No pertenece a ninguna organización ni accede a su inventario
 - **Usuario:** podrá realizar las operaciones de inventario que le sean autorizadas.
 - **Solo lectura:** podrá consultar información sin realizar modificaciones.
+
+#### Recien agregado: 
+**RF-38. Activación de cuenta y aceptación de la política de datos**
+
+El sistema deberá permitir que los usuarios nuevos activen su cuenta, definan su contraseña y acepten la política de tratamiento de datos personales antes de ingresar por primera vez.
+
+**RF-39. Restablecimiento de contraseña**
+
+El sistema deberá permitir que los usuarios restablezcan su contraseña mediante un enlace de un solo uso enviado a su correo electrónico.
 
 ### 1.2. Gestión de productos
 
@@ -117,6 +127,11 @@ El sistema deberá permitir calcular el valor económico de las existencias disp
 
 El sistema deberá permitir consultar el valor económico del inventario, tanto de manera general como según los criterios de clasificación disponibles.
 
+#### nuevos cambios costo de productos
+**RF-40. Ajuste de costo de productos**
+
+El sistema deberá permitir a los administradores de organización registrar o corregir el costo promedio de un producto mediante un registro nuevo y justificado, sin modificar los movimientos anteriores.
+
 ### 1.8. Búsqueda y consulta de información
 
 **RF-24. Búsqueda de productos**
@@ -139,7 +154,7 @@ El sistema deberá permitir importar información de productos mediante archivos
 
 **RF-28. Exportación de información**
 
-El sistema deberá permitir exportar información de productos e inventario en formatos como Excel, CSV y JSON.
+El sistema deberá permitir exportar información de productos e inventario en formatos como Excel, CSV .
 
 **RF-29. Validación de archivos importados**
 
@@ -166,7 +181,29 @@ El sistema deberá permitir que cada organización gestione su propia informaci�
 
 **RF-32. Aislamiento de información entre organizaciones**
 
-El sistema deberá garantizar que los usuarios de una organización únicamente puedan consultar y administrar la información a la que tengan acceso dentro de su propia organización.
+El sistema deberá garantizar que los usuarios de una organización únicamente puedan consultar y administrar la información a la que tengan acceso dentro de su propia organización. El administrador global gestiona las organizaciones, pero no accede a su información de inventario.
+
+### 1.12. Administración de la plataforma
+
+**RF-33. Gestión de organizaciones**
+
+El sistema deberá permitir al administrador global crear, consultar y modificar las organizaciones clientes, registrando su primer administrador de organización.
+
+**RF-34. Suspensión y reactivación de organizaciones**
+
+El sistema deberá permitir al administrador global suspender, reactivar y cerrar organizaciones de forma manual. Una organización suspendida mantiene a sus usuarios en modo solo lectura, con consulta y exportación, y una organización cerrada no permite el acceso.
+
+**RF-35. Límite de usuarios, plan y precio**
+
+El sistema deberá permitir al administrador global definir, por organización, el límite de usuarios activos, el plan y el precio, conservando el historial de cambios.
+
+**RF-36. Administración de usuarios de cualquier organización**
+
+El sistema deberá permitir al administrador global crear, desactivar, reactivar y cambiar el rol de usuarios de cualquier organización, respetando el límite de usuarios definido para cada una.
+
+**RF-37. Consulta de auditoría**
+
+El sistema deberá registrar las acciones administrativas con su usuario, fecha y organización, y permitir al administrador global consultarlas y filtrarlas.
 
 ## 2. Funcionalidades previstas para futuras versiones
 
