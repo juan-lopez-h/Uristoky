@@ -6,7 +6,7 @@ promedio ponderado (lo más simple y habitual) o PEPS. Recomiendo promedio ponde
 ## Unicidad del código de producto:
 único por organización.
 ## Stock negativo:
-fuera del MVP, así que quita ese criterio del RNF-05.
+no se puede, en esta version del mvp no hay stock negativo
 ## Multi-organización: 
 una sola base de datos con organization_id en cada tabla.
 ## Stock: 

@@ -232,6 +232,8 @@ R
 - Reportes e importaciones masivas: <35 s para hasta mas o menos 10.000 productos
 - Los movimientos de stock deben ser transaccionales
 - Stock calculado a partir de movimientos (kardex), con historial inmutable
-- Validaciones para impedir stock negativo, salvo que el cliente lo configure
+- Validaciones para impedir stock negativo
 - Ley 1581 de 2012 (habeas data): política de tratamiento de datos, autorización y términos y condiciones
 - Definir en el contrato que los datos son del cliente y que puede exportarlos (Excel/CSV) en cualquier momento
+
+Estos se encuentran mejor explicados en el backlog.md [backlock](../backlog.md)

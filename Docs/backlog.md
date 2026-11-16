@@ -471,6 +471,7 @@ Criterios de aceptación:
 
 4. Requisitos no funcionales
 Los siguientes requisitos establecen condiciones de calidad, seguridad, rendimiento y confiabilidad que deberá cumplir Uristoky.
+
 RNF-01. Disponibilidad del sistema
 El sistema deberá mantener una disponibilidad mensual mínima del 90 %, excluyendo los periodos de mantenimiento programado que se definan contractualmente.
 
@@ -478,6 +479,7 @@ Criterio de aceptación:
 - Se deberá contar con mecanismos para medir la disponibilidad mensual.
 - Se deberán registrar los periodos de indisponibilidad.
 - Se deberá poder calcular el porcentaje de disponibilidad al finalizar cada mes.
+
 RNF-02. Rendimiento en importaciones y reportes
 El sistema deberá procesar reportes e importaciones masivas de hasta aproximadamente 10.000 productos en un tiempo inferior a 35 segundos, bajo condiciones de prueba previamente establecidas.
 
@@ -486,6 +488,7 @@ Criterio de aceptación:
 - Se deberá medir el tiempo total de procesamiento.
 - Las operaciones deberán completarse en menos de 35 segundos en el entorno de pruebas definido.
 - Se deberán documentar las condiciones de la prueba, incluyendo recursos del servidor y tamaño de los archivos.
+
 RNF-03. Integridad transaccional de los movimientos
 Las operaciones que modifiquen las existencias deberán ejecutarse de manera transaccional, garantizando que todas las modificaciones relacionadas se completen correctamente o se reviertan en caso de error.
 
@@ -493,6 +496,7 @@ Criterio de aceptación:
 - Una operación incompleta no debe dejar cantidades parcialmente actualizadas.
 - Las entradas, salidas, ajustes y transferencias deben mantener la consistencia del inventario.
 - Se deben controlar las operaciones concurrentes que afecten las existencias de un mismo producto.
+
 RNF-04. Trazabilidad e inmutabilidad del historial
 El sistema deberá mantener un historial de movimientos de inventario que permita reconstruir las existencias a partir de las operaciones registradas.
 
@@ -501,6 +505,7 @@ Criterio de aceptación:
 - Los movimientos confirmados no podrán modificarse ni eliminarse mediante las operaciones habituales.
 - Las correcciones deberán realizarse mediante nuevos movimientos de ajuste o reversión.
 - Cada movimiento deberá identificar su fecha y usuario responsable.
+
 RNF-05. Control de existencias negativas
 El sistema deberá impedir que las existencias de un producto sean negativas
 
@@ -509,6 +514,7 @@ Criterio de aceptación:
 - no hay stock negativo 
 - La validación deberá realizarse en el backend.
 - Las operaciones concurrentes no deberán permitir superar las existencias disponibles por una condición de carrera.
+
 RNF-06. Protección de datos personales
 El sistema deberá contemplar las disposiciones aplicables de la Ley 1581 de 2012 de Colombia y sus normas reglamentarias en materia de protección de datos personales.
 
@@ -528,5 +534,14 @@ Criterio de aceptación:
 - La información exportada deberá conservar una estructura comprensible.
 - Las condiciones de acceso, conservación y eliminación de los datos deberán estar definidas contractualmente.
 
-RNF-08, Seguridad
-Las contraseñas con hash, 2FA para el administrador global antes de producción (RN-42), expiración de sesiones y límite de intentos de login.
+RNF-08. Seguridad
+
+El sistema deberá proteger las credenciales, las sesiones y el acceso a la plataforma.
+
+Criterio de aceptación:
+- Las contraseñas se almacenarán solo con hash seguro (bcrypt o argon2) y nunca aparecerán en registros ni respuestas.
+- La cuenta del administrador global deberá usar doble factor de autenticación antes de salir a producción.
+- Las sesiones deberán expirar tras un periodo de inactividad definido.
+- Se limitarán los intentos fallidos de inicio de sesión.
+- El mensaje de error del inicio de sesión no revelará si falló el correo o la contraseña.
+- Toda comunicación con la plataforma deberá realizarse mediante HTTPS

@@ -77,6 +77,8 @@ RN-30: El mínimo es global por producto y debe ser 0 o mayor. Sin mínimo confi
 
 RN-31: Hay alerta cuando las existencias totales son iguales o inferiores al mínimo. Existe una sola alerta activa por producto, y se cierra sola cuando se supera el mínimo.
 
+### Aclaracion
+2
 RN-30 y RN-31: El mínimo y la alerta se calculan sobre las existencias totales del producto (suma de ubicaciones).
 
 ## 8. Valoración
