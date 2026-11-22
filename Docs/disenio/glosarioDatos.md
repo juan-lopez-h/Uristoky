@@ -2,3 +2,8 @@ Glosario con el contenido correspondiente al proyecto, con el fin de ayudar a qu
 
 # Glosario
 
+
+Administrador global:
+Organizacion:
+Administrador de organizacion:
+Usuario:
