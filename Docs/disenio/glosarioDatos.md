@@ -14,8 +14,19 @@ Limite usuarios:
 ## Estado de servicio
 
 
+## catalogo 
+Producto:	Artículo que se controla en el inventario.
+Código de producto:	Identificador único dentro de la organización (RN-11).
+Categoría:	Agrupación de productos para clasificarlos.
+Unidad de medida:	Forma de cuantificar un producto (unidad, kg, litro, metro).
+Unidad base:	Unidad en la que se guardan las cantidades de un producto (RN-28).
+Conversión / equivalencia:	Relación entre unidades de la misma magnitud (RN-27).
+Almacén:	Espacio físico que contiene mercancía de la organización.
+Ubicación:	Punto específico dentro de un almacén. Pertenece a uno solo.
+Ubicación "General":	Ubicación creada por defecto en cada almacén. No se puede eliminar (RN-16).
 
-### Inventario 
+
+## Inventario 
 
 Existencias: Cantidad disponible de un producto en una ubicación. Es el término de uso general.
 Saldo:	Registro técnico donde se guardan las existencias por producto y ubicación. Debe coincidir con los movimientos (RN-23).
